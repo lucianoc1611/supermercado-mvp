@@ -1,0 +1,19 @@
+{
+  "id": "./dueno.php",
+  "name": "Codex · Portal del dueño",
+  "short_name": "Codex",
+  "description": "Control seguro de sucursales, ventas y personal.",
+  "start_url": "./dueno.php",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7f5",
+  "theme_color": "#173b35",
+  "icons": [
+    {
+      "src": "assets/pwa/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
