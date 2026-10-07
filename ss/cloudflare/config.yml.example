@@ -1,0 +1,7 @@
+tunnel: UUID-DEL-TUNEL
+credentials-file: 'C:\Users\TU-USUARIO\.cloudflared\UUID-DEL-TUNEL.json'
+
+ingress:
+  - hostname: portal.supermercado.com
+    service: http://127.0.0.1:80
+  - service: http_status:404
