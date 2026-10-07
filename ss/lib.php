@@ -1,4 +1,8 @@
 <?php
+$puerto = getenv('MYSQLPORT') ?: '3306';
+$host = getenv('MYSQLHOST') ?: (getenv('SUPERMERCADO_DB_HOST') ?: '127.0.0.1');
+
+define('DB_H', $host . ';port=' . $puerto);
 define('APP_ENV',getenv('APP_ENV')?:'development');
 define('DB_H', getenv('MYSQLHOST') ?: (getenv('SUPERMERCADO_DB_HOST') ?: '127.0.0.1'));
 define('DB_N', getenv('MYSQLDATABASE') ?: (getenv('SUPERMERCADO_DB_NAME') ?: 'railway'));
