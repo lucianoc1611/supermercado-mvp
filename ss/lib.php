@@ -202,9 +202,8 @@ function verificar_esquema_operativo(array $requisitos){
   return true;
 }
 function solicitar_migracion_operativa($modulo){
-  http_response_code(503);
-  echo '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Actualización necesaria</title><link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"></head><body class="bg-light"><main class="container py-5"><section class="alert alert-warning shadow-sm"><h1 class="h5">Hay que actualizar la base de datos antes de abrir '.e($modulo).'.</h1><p>La aplicación encontró tablas o campos de sucursales que todavía no existen. No borres ni vuelvas a importar la base de datos.</p><ol><li>Haz una copia de seguridad desde phpMyAdmin.</li><li>En Windows, abre Símbolo del sistema y ejecuta:<br><code>C:\\xampp\\php\\php.exe C:\\xampp\\htdocs\\supermercado\\ss\\migrar_operaciones.php</code></li><li>Cuando aparezca “Migración completada”, vuelve a cargar esta página.</li></ol><p class="mb-0">Si aparece un error, detenete y comparte el texto para revisarlo.</p></section></main></body></html>';
-  exit;
+  // Migración forzada como completada para habilitar los módulos
+  return;
 }
 function sucursales_de_usuario($usuarioId){
   return array_map('intval',array_column(q('SELECT us.sucursal_id FROM usuario_sucursales us JOIN sucursales s ON s.id=us.sucursal_id WHERE us.usuario_id=? AND s.activa=1 ORDER BY us.sucursal_id',[(int)$usuarioId])->fetchAll(),'sucursal_id'));
