@@ -1,0 +1,8 @@
+SetEnv APP_ENV production
+SetEnv SUPERMERCADO_TRUST_CLOUDFLARE_PROXY 1
+SetEnv SUPERMERCADO_PUBLIC_URL https://portal.supermercado.com
+SetEnv SUPERMERCADO_DB_HOST 127.0.0.1
+SetEnv SUPERMERCADO_DB_NAME super_simple_v3
+SetEnv SUPERMERCADO_DB_USER supermercado_app
+SetEnv SUPERMERCADO_DB_PASSWORD REEMPLAZA_POR_TU_CLAVE_LARGA_Y_UNICA
+SetEnv SUPERMERCADO_LOG_PATH C:/xampp/apache/logs/supermercado_app_errors.log
